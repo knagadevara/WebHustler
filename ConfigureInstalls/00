@@ -1,0 +1,11 @@
+yum install lcov
+yum install zlib-devel
+yum install libxml2-devel
+yum install libxslt-devel
+yum install gd-devel
+yum install bind-chroot geolite2-city geolite2-country
+yum group install 'Develompent Tools'
+
+## https://www.linuxfromscratch.org/blfs/view/stable/index.html
+## Nginx Download Path - https://nginx.org/en/download.html
+

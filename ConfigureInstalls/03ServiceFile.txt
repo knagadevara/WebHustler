@@ -1,0 +1,23 @@
+[Unit]
+Description=NGINX HTTP and reverse proxy server
+After=syslog.target network.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx/nginx.pid
+ExecStartPre=/usr/bin/nginx -t
+ExecStart=/usr/bin/nginx -c /srv/nginx/conf/nginx.conf
+ExecReload=/usr/bin/nginx -s reload
+ExecStop=/usr/bin/nginx -s stop
+PrivateTmp=true
+# Hardening
+ProtectSystem=full
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+SystemCallFilter=~@clock @cpu-emulation @debug @keyring @module @mount @obsolete @raw-io
+MemoryDenyWriteExecute=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictRealtime=yes
+
+[Install]
+WantedBy=multi-user.target
