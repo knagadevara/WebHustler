@@ -1,0 +1,14 @@
+- Make shure below packages are already available
+
+        yum group install 'Develompent Tools'
+        yum install bind-chroot geolite2-city geolite2-country
+        yum install lcov
+        yum install zlib-devel
+        yum install libxml2-devel
+        yum install libxslt-devel
+        yum install gd-devel
+
+- Download _wget https://download.link_
+    - PCRE2: https://www.linuxfromscratch.org/blfs/view/stable/index.html
+    - Nginx: https://nginx.org/en/download.html
+
