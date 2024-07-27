@@ -1,2 +1,3 @@
 ./configure --prefix=/usr/local   --enable-pcre2-16   --enable-pcre2-32   --enable-jit   --enable-rebuild-chartables   --enable-newline-is-any   --enable-pcre2grep-libz   --enable-pcre2grep-libbz2 --enable-pcre2test-libreadline   --enable-valgrind   --enable-coverage   --enable-fuzz-support
+make 
 make install

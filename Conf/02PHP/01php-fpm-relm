@@ -1,5 +1,5 @@
 [bluebix.com]
-user = apache
+user = apache  ; bluebix.com site will be run by this user and group
 group = apache
 listen = /run/php-fpm/bluebix-com.sock
 listen.owner = nginx

@@ -8,3 +8,5 @@
 
 - Configure php-fpm server with [help-doc](https://www.digitalocean.com/community/tutorials/php-fpm-nginx)
 
+- Create a user and group for php-fpm, then map it in fpm conf 
+
