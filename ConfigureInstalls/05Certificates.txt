@@ -1,0 +1,7 @@
+To create Selfsigned SSL certificates
+
+    openssl req -x509 -days 366 -nodes -newkey rsa:4096 -keyout ssl/nginx.key -out ssl/nginx.crt
+
+To create a DHparam key
+
+     openssl dhparam -text -5 -outform PEM -out ssl/dhparam.pem 4096
