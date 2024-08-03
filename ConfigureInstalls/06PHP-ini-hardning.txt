@@ -1,0 +1,10 @@
+allow_url_fopen = Off
+allow_url_include = Off
+cgi.fix_pathinfo = 0
+opcache.enable = 1
+opcache.validate_timestamps = 0
+opcache.validate_frequency = 0
+opcache.memory_consumption = 256
+opcache.max_accelerated_files = 8000
+opcache.interned_string_buffer = 16
+opcache.fast_shutdown = 1

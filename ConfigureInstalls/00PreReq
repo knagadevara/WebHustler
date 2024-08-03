@@ -12,3 +12,20 @@
     - PCRE2: https://www.linuxfromscratch.org/blfs/view/stable/index.html
     - Nginx: https://nginx.org/en/download.html
 
+- Checking and enabling window_scaling in Linux to avoid congestion
+
+        sysctl net.ipv4.tcp_windows_scaling
+        echo 1 > /proc/sys/net/ipv4/tcp_window_scaling
+
+- Checking minimum, pressure, maximum page values for TCP,UDP system wide buffers 
+  - TCP-packet-memory
+
+      cat /proc/sys/net/ipv4/tcp_mem 
+      cat /proc/sys/net/ipv4/tcp_rmem_min 
+      cat /proc/sys/net/ipv4/tcp_wmem_min
+
+  - udp-packet-memory
+
+      cat /proc/sys/net/ipv4/udp_mem 
+      cat /proc/sys/net/ipv4/udp_rmem_min 
+      cat /proc/sys/net/ipv4/udp_wmem_min
