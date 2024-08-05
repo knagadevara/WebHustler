@@ -2,5 +2,6 @@
 alias ngxcf='vim /srv/nginx/conf/nginx.conf'
 alias ngxal='tail -f /var/log/nginx/access.log'
 alias ngxel='tail -f /var/log/nginx/error.log'
+alias ngt='nginx -t'
 alias ngxrld='systemctl daemon-reload && sleep 1 && systemctl reload nginxd.service && sleep 2  && systemctl status nginxd.service'
-alias ngxsst='systemctl daemon-reload && sleep 1 && systemctl stop nginxd.service && sleep 2  && systemctl start nginxd.service && sleep 2 && systemctl status nginxd.service'
+alias ngxsst='systemctl daemon-reload && sleep 1 && ngt && systemctl stop nginxd.service && sleep 2  && systemctl start nginxd.service && sleep 2 && systemctl status nginxd.service'
