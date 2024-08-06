@@ -1,6 +1,6 @@
 [bluebix.com]
 user = apache  ; bluebix.com site will be run by this user and group
-group = apache
+group = apache ; which are created specifically for php-fpm processes
 listen = /run/php-fpm/bluebix-com.sock
 listen.owner = nginx
 listen.group = nginx
@@ -16,8 +16,6 @@ pm.start_servers = 10
 pm.min_spare_servers = 5
 pm.max_spare_servers = 20
 pm.process_idle_timeout = 10s
-slowlog = /var/log/php-fpm/slow.log
-php_admin_value[error_log] = /var/log/php-fpm/error.log
 php_admin_flag[log_errors] = on
 php_admin_value[memory_limit] = 128M
 php_admin_flag[log_errors] = on
